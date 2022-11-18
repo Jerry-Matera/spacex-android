@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:orientation="horizontal"
-    >
-
-    <ImageView
-        android:id="@+id/ship_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:contentDescription="@string/space_ship_image_desc"
-        android:scaleType="centerCrop"
-        tools:srcCompat="@drawable/ship_sample" />
+    app:layout_marginBaseline="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="fill_vertical"
-        android:padding="8dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/ship_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            tools:text="American Champion" />
+        <ImageView
+            android:id="@+id/ship_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/space_ship_image_desc"
+            android:scaleType="centerCrop"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ship_sample" />
 
-        <TextView
-            android:id="@+id/ship_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            tools:text="Tug" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="fill_vertical"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-        <TextView
-            android:id="@+id/ship_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            tools:text="Stopped" />
+            <TextView
+                android:id="@+id/ship_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                tools:text="American Champion" />
+
+            <TextView
+                android:id="@+id/ship_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:text="Tug" />
+
+            <TextView
+                android:id="@+id/ship_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                tools:text="Stopped" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.cardview.widget.CardView>
